@@ -1,0 +1,57 @@
+.hero-container {
+	background-image: $header-bg-img;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	color: $primary-color-light;
+	display: flex;
+	align-items: center;
+	&.short {
+		height: 20em;
+		text-transform: uppercase;
+	}
+	.introduction {
+		line-height: 1.2em;
+		margin: 0 auto;
+		text-align: center;
+		h1 {
+			font-size: 3.75em;
+			font-weight: bold;
+			span {
+				color: $feature-color;
+			}
+		}
+		p {
+			font-size: 1.72em;
+			font-weight: bold;
+		}
+
+		@include media-breakpoint-up(md) {
+			width: 50%;
+			h1 {
+				font-size: 4.65em;
+			}
+			p {
+				font-size: 2.2em;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			width: 50%;
+			h1 {
+				font-size: 5em;
+			}
+			p {
+				font-size: 2.3em;
+			}
+		}
+
+	}
+	.header-bottom {
+		bottom: -10px;
+		left: -7px;
+	}
+}

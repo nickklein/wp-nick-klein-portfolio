@@ -1,0 +1,20 @@
+{
+    "rules": {
+        "no-console": 1,
+        "no-undef": 1,
+        "no-unused-vars": 1,
+        "no-mixed-spaces-and-tabs": 1
+    },
+
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "browser": true,
+        "amd": true
+    },
+    "globals": {
+        "jQuery",
+        "$"
+    }
+}

@@ -1,0 +1,20 @@
+<section class="hero-container">
+        {% if theme == 'dark' %}
+        <img class="svg-border header-bottom" src="data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='isolation:isolate' viewBox='-1.5 711.65 1443 105.85' width='1443' height='105.85'><path d=' M 0 816 L 0 759 L 709.5 780 L 1440 713.15 L 1440 816 L 889 816 L 551 816 L 0 816 L 0 816 Z ' fill='rgb(255,255,255)' vector-effect='non-scaling-stroke' stroke-width='1' stroke='rgb(255,255,255)' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/></svg>" />
+        {% else %}
+        <img class="header-bottom" src="data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='isolation:isolate' viewBox='-1.5 711.65 1443 105.85' width='1443' height='105.85'><path d=' M 0 816 L 0 759 L 709.5 780 L 1440 713.15 L 1440 816 L 889 816 L 551 816 L 0 816 L 0 816 Z ' fill='rgb(33,33,33)' vector-effect='non-scaling-stroke' stroke-width='1' stroke='rgb(33,33,33)' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/></svg>" />
+        {% endif %}
+        <div class="introduction animate fade-in">
+            <h1>{{content.title}}</h1>
+            <p>{{content.caption}}</p>
+
+            {% if content.buttons %}
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    {% for button in content.buttons %}
+                        <a href="{{button.url}}" class="btn {{button.label|slugify}}" target="{{button.target}}">{{button.label}}</a>
+                    {% endfor %}
+            	</div>
+            {% endif %}
+    </div>
+    <div id="arrow"></div>
+</section>

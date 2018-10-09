@@ -1,0 +1,51 @@
+$body: #fff;
+$primary-color: #545454;
+$primary-font: "Roboto", sans-serif;
+
+$primary-color-light: #fff;
+
+$feature-color: #68AFE3;
+
+
+//Components
+//Buttons
+$btn-color: #fff;
+$btn-bg: none;
+$btn-border: 2px white solid;
+
+$btn-color-hover: #000;
+$btn-bg-hover: #fff;
+
+//Button Dark
+$btn-dark-color: #000;
+$btn-dark-border: 2px black solid;
+
+$btn-dark-color-hover: #fff;
+$btn-dark-bg-hover: #000;
+$btn-dark-border-hover: 2px black solid;
+
+
+//Header
+$header-bg-img: url('../images/header_background.JPG');
+
+//Expertise
+$expertise-bg-img: url('../images/expertise_background.JPG') no-repeat 50% fixed;
+
+//Skills
+$skills-bg: #3a4052;
+
+//Work
+$grid-border-radius: .5em;
+
+
+//Contact
+$contact-bg: #252934;
+
+//Forms
+$form-color: #9B9B9B;
+$form-input-bg: #1E242C;
+
+// Footer
+$footer-bg: $form-input-bg;
+$footer-color: $primary-color-light;
+$dark-grey: #565759;

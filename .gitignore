@@ -1,0 +1,12 @@
+dump
+node_modules
+vendor
+wp-admin
+wp-includes
+wp-content/plugins
+wp-content/uploads
+wp-yeti
+wp
+/*.php
+*.sql
+.env

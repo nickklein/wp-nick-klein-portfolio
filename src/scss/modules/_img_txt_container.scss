@@ -1,0 +1,21 @@
+.img-txt-container {
+	font-weight: 300;
+	.container {
+		@include media-breakpoint-up(lg) {
+			width: 75%;
+		}
+	}
+	.image {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+
+	.introduction {
+		margin-top: 1.7rem;
+	}
+	.introduction p {
+		line-height: 1.7em;
+	}
+}

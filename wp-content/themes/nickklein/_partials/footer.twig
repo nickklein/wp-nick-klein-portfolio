@@ -1,0 +1,6 @@
+<ul class="links">
+	{% for social in options.social_media %}
+    	<li><a href="{{social.url}}" target="_blank"><span class="icon-{{social.social_media}}"></span></a></li>
+    {% endfor %}
+</ul>
+<div class="copyright">Nick Klein {{"now"|date('Y')}}</div>

@@ -1,0 +1,7 @@
+<section class="carousel-container section-container">
+	<div class="slick">
+		{% for gallery in content.carousel %}
+	 		 	<img src="{{TimberImage(gallery.ID).src}}">
+		{% endfor %}
+	</div>
+</section>

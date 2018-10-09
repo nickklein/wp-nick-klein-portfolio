@@ -1,0 +1,24 @@
+form {
+	.row {
+		margin: 5px 0;
+	}
+	.nf-before-form-content {
+		display: none;
+	}
+	.nf-field-container {
+		margin-bottom: 10px;
+	}
+	input,textarea {
+		border: none;
+	}
+	input[type="text"], input[type="email"], textarea {
+		color: $form-color;
+		background: $form-input-bg;
+		padding: 1em;
+		width: 100%;
+		border-radius: .5em;
+	}
+	input[type="submit"], input[type="button"] {
+		margin: 1.5em 0;
+	}
+}

@@ -1,0 +1,19 @@
+<section class="one-column-txt-container section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-md-12 wpjs slide-left">
+                {% if content.title %}
+            	   <h2>{{content.title}}</h2>
+                {% endif %}
+                {{content.one_column}}
+	            {% if content.buttons %}
+	                <div class="btn-group" role="group" aria-label="Basic example">
+	                    {% for button in content.buttons %}
+	                        <a href="{{button.url}}" class="btn dark" target="{{button.target}}">{{button.label}}</a>
+	                    {% endfor %}
+	            	</div>
+	            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

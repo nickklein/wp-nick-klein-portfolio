@@ -1,0 +1,16 @@
+{% if content.background_type == 'image' %}
+	{% set style = 'background-image: url(' ~ TimberImage(content.background.ID).src ~ ');' %}
+{% else %}
+	{% set style = 'background-image: none; background-color: ' ~ content.background_color ~ ';' %}
+{% endif %}
+<section class="hero-container short" style="{{style}}">
+    <div class="introduction animate fade-in">
+    	{% if content.logo %}
+    		<img src="{{TimberImage(content.logo).src}}" alt="{{content.title}}">
+    	{% else %}
+    		{% if content.title %}
+				<h1>{{content.title}}</h1>
+    		{% endif %}
+    	{% endif %}
+    </div>
+</section>

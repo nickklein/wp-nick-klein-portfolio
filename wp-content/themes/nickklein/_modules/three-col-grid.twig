@@ -1,0 +1,45 @@
+<section class="three-col-grid section-container">
+    <h2 id="work">{{content.section_title}}</h2>
+        
+        {% if fn('is_front_page') %}
+            <div style="text-align: center;">
+                <div class="btn-group filter-button-group">
+                    <button type="button" class="btn btn-secondary" data-filter="all">All</button>
+                    {% set terms = ''|get_category %}
+
+                    {% for term in terms %}
+                        <button type="button" class="btn btn-secondary" data-filter="{{term.slug}}">{{term.name}}</button>
+                    {% endfor %}
+                 </div>
+            </div>
+        {% endif %}
+
+        <div class="container-wrap">
+            <div class="row">
+                {% for project in content.work %}
+                    <div class="col-item wpjs slide-bottom col-md-6 col-lg-4 all {{project|get_category_classes}}">
+                        <a href="{{project.link}}" class="grid-item">
+                                {% if project.custom.project_thumbnail %}
+                                    <div class="grid-image">
+                                            <img class="rounded" src="{{TimberImage(project.custom.project_thumbnail).src|resize(500,500)}}">
+                                    </div>
+                                {% else %}
+                                    <div class="grid-image color" style="background-color: {{project.thumbnail_background_color}};"></div>
+                                {% endif %}
+
+                                {% if project.custom.project_logo %}
+                                    <div class="grid-info">
+                                        <img src="{{TimberImage(project.custom.project_logo).src}}">  
+                                    </div>
+                                {% else %}
+                                    <div class="grid-info text">
+                                        <h3>{{project.title}}</h3>  
+                                    </div>
+                                {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

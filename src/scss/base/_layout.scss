@@ -1,0 +1,123 @@
+body {
+	background: $body;
+	font-family: $primary-font;
+	color: $primary-color;
+	overflow-x: hidden;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.wpjs {
+	opacity: 0;
+}
+
+.svg-border {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: calc(100% + 10px);
+	display: block;
+}
+
+
+.section-container {
+	clear: left;
+	padding: 2.5em 0;
+	h2 {
+		font-size: 2.25em;
+		font-weight: bold;
+		text-align: center;
+		margin: 0 0 1.2em 0;
+		&.featured {
+			color: $feature-color;
+		}
+	}
+}
+
+.expertise{
+	background: $expertise-bg-img;
+	background-size: cover;
+	color: $primary-color-light;
+	width: 100%;
+	.introduction {
+		h2 {
+			margin-bottom: 0;
+		}
+		p {
+			text-align: center;
+			margin: 0 0 1.2em 0;
+		}
+	}
+	.exp-container {
+		padding: 0;
+		margin: 0;
+	    list-style: none;
+	    @include media-breakpoint-up(md) {
+	   		display: flex
+		}
+
+		.exp-item {
+	    	height: 13em;
+			margin: 5px;
+		    @include media-breakpoint-up(md) {
+				flex: 1 0 auto;
+			}
+			.icons {
+				margin-top: 0.5em;
+				text-align: right;
+			}
+			.info h3 {
+				color: $feature-color;
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+		}
+		.exp-item:before {
+		    content:'';
+		    float:left;
+		    padding-top:100%;
+		}
+
+	}
+
+	.skills-container {
+		display: none;
+		list-style-type: none;
+		width: 100%;
+		padding: 0;
+		li {
+			display: block;
+			margin: 5px;
+			.bg {
+				padding: 1em 1em;
+				background: lighten($skills-bg, 20%);
+				span {
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+				&:hover {
+					background: lighten($skills-bg, 30%);
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	background: $contact-bg;
+	padding: 6em 0 2.5em 0;
+	.contact-top {
+		top: -6px;
+		left: -5px;
+	}
+	.form {
+		@include media-breakpoint-up(lg) {
+			width: 75%;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+.animate {
+	opacity: 0;
+	&.slide-left {
+		animation: slideInLeft .75s ease both;
+	}
+
+	&.slide-right {
+		animation: slideInRight .75s ease both;
+	}
+
+  &.slide-bottom {
+    animation: slideInBottom .75s ease both;
+  }
+
+
+	&.fade-in {
+		animation: fadeIn 3s ease both;
+	}
+
+	&.fade-in-quick {
+		animation: fadeIn 1s ease both;
+	}
+
+  &:nth-child(0) {
+     -webkit-animation-delay: 0s;
+     animation-delay: 0s;
+  }
+
+  &:nth-child(1) {
+     -webkit-animation-delay: 0.1s;
+     animation-delay: 0.1s;
+  }
+
+  &:nth-child(2) {
+     -webkit-animation-delay: 0.2s;
+     animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+     -webkit-animation-delay: 0.3s;
+     animation-delay: 0.3s;
+  }
+
+  &:nth-child(4) {
+     -webkit-animation-delay: 0.4s;
+     animation-delay: 0.4s;
+  }
+
+  &:nth-child(5) {
+     -webkit-animation-delay: 0.5s;
+     animation-delay: 0.5s;
+  }
+
+  &:nth-child(6) {
+     -webkit-animation-delay: 0.6s;
+     animation-delay: 0.6s;
+  }
+
+
+  &:nth-child(6) {
+     -webkit-animation-delay: 0.6s;
+     animation-delay: 0.6s;
+  }
+
+  &:nth-child(6) {
+     -webkit-animation-delay: 0.6s;
+     animation-delay: 0.6s;
+  }
+
+  &:nth-child(7) {
+     -webkit-animation-delay: 0.7s;
+     animation-delay: 0.76s;
+  }
+
+  &:nth-child(8) {
+     -webkit-animation-delay: 0.8s;
+     animation-delay: 0.8s;
+  }
+
+  &:nth-child(9) {
+     -webkit-animation-delay: 0.9s;
+     animation-delay: 0.9s;
+  }
+
+  &:nth-child(10) {
+     -webkit-animation-delay: 1s;
+     animation-delay: 1s;
+  }
+
+
+
+
+
+
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInLeft {
+  0% {
+  	position: relative;
+  	left: -5em;
+    opacity: 0;
+  }
+
+  100% {
+  	position: relative;
+  	left:0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+  	position: relative;
+  	right: -5em;
+    opacity: 0;
+  }
+
+  100% {
+  	position: relative;
+  	right:0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    position: relative;
+    bottom: -5em;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    bottom:0;
+    opacity: 1;
+  }
+}
