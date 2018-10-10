@@ -81,10 +81,15 @@ Production
 
 // Compress CSS
 gulp.task('minifyCSS', function() {
-	return gulp.src('src/scss/**/*.scss')
+	// Note: The order is important, it's the order for concat
+	var folders = [
+				'src/scss/app.scss'
+	];
+	gulp.src(folders)
 		.pipe(concat('app.css'))
 		.pipe(sass({outputStyle: 'compressed'}))
-		.pipe(gulp.dest(destination + '/css'))
+		.pipe(gulp.dest(destination + '/css'));
+
 });
 
 gulp.task('minifyJS', function() {
@@ -92,7 +97,7 @@ gulp.task('minifyJS', function() {
 		browserify('src/js/init.js')
 			.transform(babelify)
 			.bundle()
-			.pipe(source('src.js'))
+			.pipe(source('app.js'))
 			.pipe(buffer())
 			.pipe(uglify())
 			.pipe(gulp.dest(destination + '/js'));

@@ -3,7 +3,10 @@
 {% else %}
 	{% set style = 'background-image: none; background-color: ' ~ content.background_color ~ ';' %}
 {% endif %}
-<section class="hero-container short" style="{{style}}">
+<section class="hero-container short" style="position: relative; {{style}}">
+    <div class="container-wrap">
+        <a class="back" href="{{site.link}}">&laquo; Go back</a>
+    </div>
     <div class="introduction animate fade-in">
     	{% if content.logo %}
     		<img src="{{TimberImage(content.logo).src}}" alt="{{content.title}}">
