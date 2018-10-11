@@ -66,8 +66,8 @@
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: 3em;
-			@include media-breakpoint-up(md) {
-				font-size: 6.5em;
+			@include media-breakpoint-up(xl) {
+				font-size: 6em;
 			}
 		}
 	}
