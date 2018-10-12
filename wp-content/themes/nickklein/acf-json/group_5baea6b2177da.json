@@ -492,6 +492,25 @@
                                     "maxlength": ""
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_5bc0f02e67f56",
+                            "label": "Enable Tags",
+                            "name": "enable_tags",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -540,6 +559,33 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bc0efe586435": {
+                    "key": "layout_5bc0efe586435",
+                    "name": "tags",
+                    "label": "Tags",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc0efee86436",
+                            "label": "Message",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Show tags of this Custom Post",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -938,5 +984,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539141988
+    "modified": 1539371078
 }

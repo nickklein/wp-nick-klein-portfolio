@@ -1,7 +1,6 @@
 <section class="expertise section-container">
     <div class="introduction">
         <h2 data-expertise="{{content.exp_section_title}}" data-skills="{{content.skills_section_title}}">{{content.exp_section_title}}</h2>
-        <p><a href="#" class="view-skills">View Skills</a></p>
     </div>
     <div class="container">
         {% set count = 0 %}
@@ -25,11 +24,5 @@
                 {% endif %}
                 {% set count = count + 1 %}
         {% endfor %}
-
-        <ul id="gallery" class="skills-container">
-            {% for item in content.skills_repeater %}
-                <li class="skill-item wpjs slide-left"><div class="bg" style="width: {{item.percentage}}%;"><span class="vertical-text">{{item.label}}</span></div></li>
-            {% endfor %}
-        </ul>
     </div>
 </section>

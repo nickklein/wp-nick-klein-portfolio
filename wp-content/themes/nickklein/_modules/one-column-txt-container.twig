@@ -16,4 +16,15 @@
             </div>
         </div>
     </div>
+
+    <div class="skills container">
+        <div class="row">
+            <div class="col-xl-12 col-md-12 wpjs slide-left">
+                <p>Technologies used:</p>
+                {% for item in post|get_skills %}
+                    <span class="tag">{{item}}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </section>

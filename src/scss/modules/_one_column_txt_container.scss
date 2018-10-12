@@ -3,4 +3,15 @@
 	
 	p { line-height: 1.7em; }
 	strong { font-weight: bold; }
+
+	.skills {
+		padding-top: 3em;
+		.tag {
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+			background: $feature-color;
+			padding: 0.5em 1em;
+		}
+	}
 }
