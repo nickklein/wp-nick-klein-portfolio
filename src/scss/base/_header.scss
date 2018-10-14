@@ -9,12 +9,13 @@
 	color: $primary-color-light;
 	display: flex;
 	align-items: center;
+	position: relative;
 	&.short {
 		height: 20em;
 		text-transform: uppercase;
 		.introduction img {
 			width: 75%;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				width: auto;
 			}
 		}
