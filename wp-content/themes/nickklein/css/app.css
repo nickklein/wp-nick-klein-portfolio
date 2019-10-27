@@ -1736,10 +1736,16 @@ input[type="button"].btn-block {
   height: 100vh;
   color: #fff;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .hero-container.short {
     height: 20em;
     text-transform: uppercase; }
+    .hero-container.short .introduction img {
+      width: 75%; }
+      @media (min-width: 992px) {
+        .hero-container.short .introduction img {
+          width: auto; } }
   .hero-container .introduction {
     line-height: 1.2em;
     margin: 0 auto;
@@ -1805,15 +1811,14 @@ a:hover {
   background-size: cover;
   color: #fff;
   width: 100%; }
-  .expertise .introduction h2 {
-    margin-bottom: 0; }
   .expertise .introduction p {
     text-align: center;
     margin: 0 0 1.2em 0; }
   .expertise .exp-container {
     padding: 0;
     margin: 0;
-    list-style: none; }
+    list-style: none;
+    overflow: hidden; }
     @media (min-width: 768px) {
       .expertise .exp-container {
         display: flex; } }
@@ -1822,7 +1827,8 @@ a:hover {
       margin: 5px; }
       @media (min-width: 768px) {
         .expertise .exp-container .exp-item {
-          flex: 1 0 auto; } }
+          flex: 0 0 50%;
+          max-width: 50%; } }
       .expertise .exp-container .exp-item .icons {
         margin-top: 0.5em;
         text-align: right; }
@@ -1844,12 +1850,12 @@ a:hover {
       margin: 5px; }
       .expertise .skills-container li .bg {
         padding: 1em 1em;
-        background: #646f8e; }
+        background: #68AFE3; }
         .expertise .skills-container li .bg span {
           font-weight: bold;
           text-transform: uppercase; }
         .expertise .skills-container li .bg:hover {
-          background: #8089a5; }
+          background: #93c6eb; }
 
 .contact {
   position: relative;
@@ -1917,6 +1923,15 @@ a.btn, .btn input[type="button"] {
       margin-left: 0; }
     .btn-group a:last-child {
       margin: 0; }
+
+a.back {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  text-transform: initial; }
 
 .animate {
   opacity: 0; }
@@ -2145,6 +2160,16 @@ form input[type="submit"], form input[type="button"] {
     line-height: 1.7em; }
   .one-column-txt-container strong {
     font-weight: bold; }
+  .one-column-txt-container .skills {
+    padding-top: 3em; }
+    .one-column-txt-container .skills .tag {
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #68AFE3;
+      padding: 0.5em 1em;
+      float: left;
+      margin: 0.2em; }
 
 .two-column-txt-container {
   font-weight: 300; }
@@ -2209,6 +2234,6 @@ form input[type="submit"], form input[type="button"] {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 3em; }
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       .three-col-grid .grid-info.text h3 {
-        font-size: 6.5em; } }
+        font-size: 6em; } }

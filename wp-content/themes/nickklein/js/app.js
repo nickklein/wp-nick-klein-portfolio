@@ -14049,22 +14049,21 @@ global.$ = global.jQuery = require('jquery');
 var globaljs = require('./modules/global');
 var headerjs = require('./modules/header');
 var expertisejs = require('./modules/expertise');
-var footerjs = require('./modules/footer');
+//var footerjs = require('./modules/footer');
 
 globaljs.init();
 headerjs.init();
 expertisejs.init();
-footerjs.init();
+//footerjs.init();
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./modules/expertise":5,"./modules/footer":6,"./modules/global":7,"./modules/header":8,"jquery":1}],5:[function(require,module,exports){
+},{"./modules/expertise":5,"./modules/global":6,"./modules/header":7,"jquery":1}],5:[function(require,module,exports){
 'use strict';
 
 /* exported module, exports */
 module.exports = {
 	init: function init(self) {
 		this.bind();
-		//this.header();
 	},
 	bind: function bind() {
 		$('.view-skills').click(function (e) {
@@ -14088,15 +14087,6 @@ module.exports = {
 };
 
 },{}],6:[function(require,module,exports){
-'use strict';
-
-module.exports = {
-	init: function init(self) {
-		console.log('footer');
-	}
-};
-
-},{}],7:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -14149,7 +14139,7 @@ module.exports = {
 	}
 };
 
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 var slick = require('slick-carousel');

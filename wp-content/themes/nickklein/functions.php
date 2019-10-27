@@ -38,6 +38,7 @@ Timber::$autoescape = false;
  */
 include 'custom_posts/projects.php';
 include 'custom_posts/taxonomy-project_categories.php';
+include 'custom_posts/taxonomy-project_skills.php';
 
 class StarterSite extends Timber\Site {
 	/** Add timber support. */
@@ -146,13 +147,6 @@ class StarterSite extends Timber\Site {
 		add_theme_support( 'menus' );
 	}
 
-	public function get_category() {
-		$terms = get_terms( 'project_categories', array(
-		    'hide_empty' => false,
-		) );
-		return $terms;
-	}
-
 	public function get_category_classes($project) {
 		$string = '';
 		$categories = $project->terms( 'project_categories' );
@@ -164,6 +158,24 @@ class StarterSite extends Timber\Site {
 		return $string;
 	}
 
+	public function get_category() {
+		$terms = get_terms( 'project_categories', array(
+		    'hide_empty' => false,
+		) );
+		return $terms;
+	}
+
+	public function get_skills($project) {
+		$return = array();
+		$categories = $project->terms( 'project_skills' );
+		if (!empty($categories)) {
+			foreach($categories as $category) {
+				$return[] = $category->slug;
+			}
+			return $return;
+		}
+	}
+
 	/** This is where you can add your own functions to twig.
 	 *
 	 * @param string $twig get extension.
@@ -172,7 +184,8 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter( new Twig_SimpleFilter( 'slugify', array( $this, 'slugify' ) ) );
 		$twig->addFilter( new Twig_SimpleFilter( 'get_category_classes', array( $this, 'get_category_classes' ) ) );
-		$twig->addFilter( new Twig_SimpleFilter( 'get_category', array( $this, 'get_category' ) ) );				
+		$twig->addFilter( new Twig_SimpleFilter( 'get_category', array( $this, 'get_category' ) ) );
+		$twig->addFilter( new Twig_SimpleFilter( 'get_skills', array( $this, 'get_skills' ) ) );
 		return $twig;
 	}
 
