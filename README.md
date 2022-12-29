@@ -1,5 +1,5 @@
-# Nick Klein's Portfolio
-This is the source code for my portfolio website, which includes all the front-end and the back-end developement files.
+# Nick Klein's Portfolio (ARCHIVED)
+This was the source code for my portfolio website, which includes all the front-end and the back-end developement files.
 nickklein.ca
 
 ## Gulp
